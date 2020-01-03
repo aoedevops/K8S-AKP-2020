@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service #Endpoints
+metadata:
+  name: kplabs-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 80
+
+#subsets:
+#  - addresses:
+#      - ip: IP-HERE
+#    ports:
+#      - port: 80 
+

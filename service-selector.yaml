@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service #Endpoints
+metadata:
+  name: kplabs-service-selector
+spec:
+  selector:
+    run: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+
+
