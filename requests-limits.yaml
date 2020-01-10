@@ -1,16 +1,18 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: kplabs-pod
+  name: kplabs-pod-test
 spec:
   containers:
   - name: kplabs-container
     image: nginx
     resources:
+      limits:
+        memory: "512Mi"
+        cpu: "1"
       requests:
         memory: "64Mi"
         cpu: "0.5"
-      limits:
-	memory: "128Mi"
-        cpu: "1"
-    
+#      limits:
+#        memory: "128Mi" //12GB RAM is assigned
+#        cpu: "1"
